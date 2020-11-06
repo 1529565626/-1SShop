@@ -1,0 +1,40 @@
+spring:
+  profiles: dev
+
+
+  datasource:
+    # 使用druid数据源..
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    #    url: jdbc:mysql://119.45.211.18:3306/nongmai_shop?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://192.168.1.37:3306/-1shop?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    initialSize: 5
+    filters: stat
+    maxActive: 20
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: true
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+
+
+jwt:
+  tokenHeader: Authorization #JWT存储的请求头
+  secret: -1shop-admin-key #JWT加解密使用的密钥
+  expiration: 604800 #JWT的超期限时间(60*60*24)
+  tokenHead: Bearer  #JWT负载中拿到开头
+
+
+swagger:
+  enable: true
+  title: -1shop admin模块
+  description: ssk-admin-server
+  version: 1.0

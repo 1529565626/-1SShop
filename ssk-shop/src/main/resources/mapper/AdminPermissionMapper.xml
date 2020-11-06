@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssk.shop.repository.AdminPermissionMapper">
+
+    <resultMap id="BaseResultMap" type="com.ssk.shop.entity.AdminPermission">
+        <!--@Table admin_permission-->
+        <result property="adminPermissionId" column="admin_permission_id" jdbcType="VARCHAR"/>
+        <result property="permissionRemark" column="permission_remark" jdbcType="VARCHAR"/>
+        <result property="permissionName" column="permission_name" jdbcType="VARCHAR"/>
+        <result property="pageItemId" column="page_item_id" jdbcType="VARCHAR"/>
+        <result property="jurisdictionId" column="jurisdiction_id" jdbcType="VARCHAR"/>
+    </resultMap>
+
+
+</mapper>
